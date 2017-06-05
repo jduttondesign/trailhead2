@@ -26,6 +26,15 @@ namespace testcapstone
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-route.js",
+                      "~/APP/App.js",
+                      "~/Scripts/respond.js")
+                      .IncludeDirectory("~/APP", "*.js", true));
+
+
         }
     }
 }

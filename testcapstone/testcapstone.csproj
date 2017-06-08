@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201706052224575_NewHike.Designer.cs">
       <DependentUpon>201706052224575_NewHike.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706072355000_NewHike1.cs" />
+    <Compile Include="Migrations\201706072355000_NewHike1.Designer.cs">
+      <DependentUpon>201706072355000_NewHike1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -305,6 +309,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706052224575_NewHike.resx">
       <DependentUpon>201706052224575_NewHike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706072355000_NewHike1.resx">
+      <DependentUpon>201706072355000_NewHike1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

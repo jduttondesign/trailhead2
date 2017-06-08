@@ -11,6 +11,8 @@ namespace testcapstone.Models
     public class NewHike
     {
         [Key]
+        public int id { get; set; }
+       
         public string Trail { get; set; }
 
         public int Miles { get; set; }
@@ -20,9 +22,8 @@ namespace testcapstone.Models
         public string Safety { get; set; }
     }
 
-    public class NewHikeDBContext : DbContext
-
-    {
-        public DbSet<NewHike> Trailheadtest { get; set; }
-    }
+  
 }
+
+
+

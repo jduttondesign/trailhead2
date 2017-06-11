@@ -202,16 +202,25 @@
     <Compile Include="Migrations\201706072355000_NewHike1.Designer.cs">
       <DependentUpon>201706072355000_NewHike1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706101554225_ChangingfromNewHike.cs" />
+    <Compile Include="Migrations\201706101554225_ChangingfromNewHike.Designer.cs">
+      <DependentUpon>201706101554225_ChangingfromNewHike.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\NewHikeModels.cs" />
+    <Compile Include="Models\HikeModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="APP\App.js" />
+    <Content Include="APP\partials\Add.html" />
+    <Content Include="APP\partials\Delete.html" />
+    <Content Include="APP\partials\Get.html" />
+    <Content Include="APP\partials\Index.html" />
+    <Content Include="APP\partials\Update.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -225,10 +234,10 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="APP\CreateController.js" />
+    <Content Include="APP\HomeController.js" />
     <Content Include="APP\DeleteController.js" />
-    <Content Include="APP\ReadController.js" />
-    <Content Include="APP\UpdateController.js" />
+    <Content Include="APP\GetController.js" />
+    <Content Include="APP\AddController.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -312,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706072355000_NewHike1.resx">
       <DependentUpon>201706072355000_NewHike1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101554225_ChangingfromNewHike.resx">
+      <DependentUpon>201706101554225_ChangingfromNewHike.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

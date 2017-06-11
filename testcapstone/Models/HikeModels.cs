@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace testcapstone.Models
 {
-    public class NewHike
+    public class Hike
     {
         [Key]
         public int id { get; set; }

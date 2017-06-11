@@ -31,7 +31,7 @@ namespace testcapstone
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-route.js",
                       "~/APP/App.js",
-                      "~/Scripts/respond.js")
+                      "~/Scripts/respond.js")//why i need this
                       .IncludeDirectory("~/APP", "*.js", true));
 
 

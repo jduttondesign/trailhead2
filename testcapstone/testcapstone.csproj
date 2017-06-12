@@ -216,10 +216,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="APP\App.js" />
+    <Content Include="APP\images\Grotto-Falls-Trail1-700x277.jpg" />
     <Content Include="APP\partials\Add.html" />
     <Content Include="APP\partials\Delete.html" />
     <Content Include="APP\partials\Get.html" />
-    <Content Include="APP\partials\Index.html" />
+    <Content Include="APP\partials\Home.html" />
     <Content Include="APP\partials\Update.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

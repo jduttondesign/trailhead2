@@ -11,18 +11,20 @@ namespace testcapstone.Controllers
     
     public class HikeController : ApiController
     {
+        ApplicationDbContext db = new ApplicationDbContext();
+
         [Route("api/hike")]
-        [System.Web.Http.HttpGet, System.Web.Http.Route]
             public HttpResponseMessage GetAll()
         {
-        return Request.CreateResponse(HttpStatusCode.OK);
+            return Request.CreateResponse(HttpStatusCode.OK, db.Hikes);
         }
 
         [Route("api/hike")]
         [HttpPost]
-        public HttpResponseMessage Post()
+        public HttpResponseMessage Post(Hike hike)
         {
-        
+            db.Hikes.Add(hike);
+            db.SaveChanges();
           return Request.CreateResponse(HttpStatusCode.OK);
         }
 

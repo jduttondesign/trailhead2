@@ -1,55 +1,45 @@
 ﻿var app = angular.module('HikeApp', ['ngRoute']);
 
-app.config(function ($routeProvider) {
+app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
     $routeProvider
 
-    .when('/', {
-        templateUrl: 'pages/home.html',
+    .when('/home', {
+        templateUrl: 'App/partials/Home.html',
         controller: 'HomeController'
     })
 
     .when('/add', {
-        templateUrl: 'pages/add.html',
+        templateUrl: 'partials/Add.html',
         controller: 'AddController'
     })
 
     .when('/get', {
-        templateUrl: 'pages/get.html',
+        templateUrl: 'partials/Get.html',
         controller: 'GetController'
     })
 
      .when('/update', {
-         templateUrl: 'pages/update.html',
+         templateUrl: 'partials/Update.html',
          controller: 'UpdateController'
      })
 
      .when('/delete', {
-         templateUrl: 'pages/delete.html',
+         templateUrl: 'partials/Delete.html',
          controller: 'DeleteController'
      })
 
     .otherwise({ redirectTo: '/' });
-});
 
-app.controller('HomeController', function ($scope) {
-    $scope.message = 'Hello from HomeController';
-});
+    //$locationProvider.html5Mode(true);
 
-app.controller('AddController', function ($scope) {
-    $scope.message = 'Hello from AddController';
-});
+    }
+]);
 
-app.controller('GetController', function ($scope) {
-    $scope.message = 'Hello from GetController';
-});
 
-app.controller('UpdateController', function ($scope) {
-    $scope.message = 'Hello from UpdateController';
-});
 
-app.controller('DeleteController', function ($scope) {
-    $scope.message = 'Hello from DeleteController';
-});
+
+
+
 
 
 

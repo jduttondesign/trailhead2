@@ -1,57 +1,142 @@
-﻿<!DOCTYPE html>
+﻿
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>-->
+        
+            <!--<style>
+                #map {
+                    height: 400px;
+                    width: 100%;
+                }
+            </style>
+        <script src="custom-js-google-map.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAjsdysL9H1DocDrwqPa8vdeWAYIN4beLE"</script>
+       -->
     
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
-    </head>
-    <body>
-        <script type="text/ng-template" id="pages/home.html">
-            <h1>Home</h1>
-            <h3>{{message}}</h3>
-        </script>
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Navbar</a>
+<style>
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                <a href="#/">Home</a>
-                <a href="#/add">Add</a>
-                <a href="#/get">Get</a>
-                <a href="#/update">Update</a>
-                <a href="#/delete">Delete</a>
-                <div ng-view></div>
+  /* To see the limits of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
 
-                <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-                </script>
-                <script src="app.js"></script>
-    </body>
-</html>
+div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* To make sure that all label have the same size and are properly align */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  /* To make sure that all text field have the same font settings
+     By default, textarea are set with a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text field */
+  width: 300px;
+
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highligh on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text field with their label */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+
+  /* To allow users to resize any textarea vertically
+     It works only on Chrome, Firefox and Safari */
+  resize: vertical;
+}
+
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra magin represent the same space as the space between
+     the labels and their text fields */
+  margin-left: .5em;
+
+
+
+  /*css for trail list on left hand side of page*/
+
+.one {
+  list-style: circle;
+}
+
+.two {
+  list-style: square inside;
+}
+</style>
+
+
+   <div>
+    <div>
+        <label for="name">Name of Trail:</label>
+        <input type="text" id="name" name="user_name" ng-model="newhike.trail">
+    </div>
+
+    <div>
+        <label for="mail">Miles:</label>
+        <input type="email" id="mail" name="user_message" ng-model="newhike.miles">
+    </div>
+
+    <div>
+        <label for="msg">Terrain:</label>
+        <textarea id="msg" name="user_message" ng-model="newhike.terrain"></textarea>
+    </div>
+
+       <div>
+           <label for="msg">Safety:</label>
+           <textarea id="msg" name="user_message" ng-model="newhike.safety"></textarea>
+       </div>
+
+    <div class="button">
+        <button type="submit">Save your trail!</button>
+    </div>
+</div>
+
+  Hikes in Tennessee
+<ul class="one">
+    <li>List Item1</li>
+    <li>List Item2</li>
+    <li>List Item3</li>
+</ul>
+
+Hikes Coming Soon!
+<ul class="two">
+    <li>List Item A</li>
+    <li>List Item B</li>
+    <li>List Item C</li>
+</ul>
+
+
+   
+
+
+
+    
+
+
 

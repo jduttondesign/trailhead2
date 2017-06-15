@@ -215,13 +215,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="APP\App.js" />
-    <Content Include="APP\images\Grotto-Falls-Trail1-700x277.jpg" />
-    <Content Include="APP\partials\Add.html" />
-    <Content Include="APP\partials\Delete.html" />
-    <Content Include="APP\partials\Get.html" />
-    <Content Include="APP\partials\Home.html" />
-    <Content Include="APP\partials\Update.html" />
+    <Content Include="App\app.js" />
+    <Content Include="App\images\Grotto-Falls-Trail1-700x277.jpg" />
+    <Content Include="App\partials\Add.html" />
+    <Content Include="App\partials\Delete.html" />
+    <Content Include="App\partials\Get.html" />
+    <Content Include="App\partials\Home.html" />
+    <Content Include="App\partials\Update.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -235,10 +235,10 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="APP\HomeController.js" />
-    <Content Include="APP\DeleteController.js" />
-    <Content Include="APP\GetController.js" />
-    <Content Include="APP\AddController.js" />
+    <Content Include="App\HomeController.js" />
+    <Content Include="App\DeleteController.js" />
+    <Content Include="App\GetController.js" />
+    <Content Include="App\AddController.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

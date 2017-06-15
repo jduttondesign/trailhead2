@@ -13,13 +13,13 @@ namespace testcapstone.Controllers
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
-        [Route("api/hike")]
-            public HttpResponseMessage GetAll()
+        [Route("api/hike/")]
+            public IEnumerable<Hike> GetAll()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, db.Hikes);
+            return db.Hikes;
         }
 
-        [Route("api/hike")]
+        [Route("api/hike/")]
         [HttpPost]
         public HttpResponseMessage Post(Hike hike)
         {

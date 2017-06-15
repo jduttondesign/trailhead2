@@ -12,13 +12,34 @@
        // })
 //});
 
-app.controller('HomeController', ['$scope', function ($scope) {
+app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.myHikeList = [];
     $scope.newhike = {};
     
+    //This function sends an HTTP POST request to our api.
+    //https://docs.angularjs.org/api/ng/service/$http
+    $scope.submit = function (hike) {
+        /*
+            Sometimes the $http functionality is abstracted out
+            into a service or factory. 
+        */
+        $http.post('/api/hike', hike)
+            .then(function (res) {
+                //Redirects to list page
+                //$location.path('/list');
+            });
 
-    console.log($scope.newhike);
-
+        console.log($scope.newhike);
+    }
      
+    $http.get('/api/hike')
+           .then(function (res) {
+               //Redirects to list page
+               //$location.path('/list');
+               
+               
+               console.log("hikelist", res);
+           });
 
-}]);
+
+    }]);

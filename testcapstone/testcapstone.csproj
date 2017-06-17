@@ -221,6 +221,7 @@
     <Content Include="App\partials\Delete.html" />
     <Content Include="App\partials\Get.html" />
     <Content Include="App\partials\Home.html" />
+    <Content Include="App\partials\List.html" />
     <Content Include="App\partials\Update.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -238,7 +239,7 @@
     <Content Include="App\HomeController.js" />
     <Content Include="App\DeleteController.js" />
     <Content Include="App\GetController.js" />
-    <Content Include="App\AddController.js" />
+    <Content Include="App\ListController.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

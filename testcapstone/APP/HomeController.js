@@ -1,8 +1,4 @@
-﻿//$scope.empty Object
-//ng-model name of obj.name
-
-//once i have ojb 
-//make call to backend controller to push to db
+﻿
 
 //app.controller("HomeController", function($scope, $rootScope) {
     //$scope.Home = {};//was $scope.Hikes = {};
@@ -15,31 +11,54 @@
 app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.myHikeList = [];
     $scope.newhike = {};
+   // $scope.HikesId = $routeParams.id;
     
     //This function sends an HTTP POST request to our api.
     //https://docs.angularjs.org/api/ng/service/$http
     $scope.submit = function (hike) {
-        /*
-            Sometimes the $http functionality is abstracted out
-            into a service or factory. 
-        */
+      
+        console.log(hike);
+
         $http.post('/api/hike', hike)
             .then(function (res) {
-                //Redirects to list page
-                //$location.path('/list');
+             $scope.newhike = {};
+                //$location.path('/home');
+             updatelist();
             });
-
-        console.log($scope.newhike);
+        console.log($scope.newhike.miles);
     }
      
-    $http.get('/api/hike')
-           .then(function (res) {
-               //Redirects to list page
-               //$location.path('/list');
-               
-               
-               console.log("hikelist", res);
-           });
+    function updatelist() {
+        $http.get('/api/hike')
+               .then(function (res) {
+                  
+
+                   //console.log("hikelist", res);
+
+                   $scope.hikelist = res.data;
+                   console.log("hikelist", $scope.hikelist);
+
+                   //$scope.apply();
+               });
+    }
+
+    updatelist();
 
 
-    }]);
+   // RouteProvider.state('/api/hike', {
+       // url: '/:id',
+       // templateUrl: 'App/partials/Home.html',
+        //controller: 'HomeController'
+   // })
+
+}]);
+
+
+//app.controller("DonationViewCtrl", function($scope, $routeParams, DonationFactory){
+    //$scope.selectedDonation = {};
+    //let donationId = $routeParams.id;
+
+    //DonationFactory.getSingleDonation(donationId).then(function(oneDonation){
+      //  oneDonation.id=donationId; 
+        //$scope.selectedDonation = oneDonation;
+        

@@ -99,7 +99,7 @@ button {
 
     <div>
         <label for="mail">Miles:</label>
-        <input type="email" id="mail" name="user_message" ng-model="newhike.miles">
+        <input type="number" id="mail" name="user_message" ng-model="newhike.miles">
     </div>
 
     <div>
@@ -117,19 +117,20 @@ button {
     </div>
 </div>
 
-  Hikes in Tennessee
-<ul class="one">
-    <li>List Item1</li>
-    <li>List Item2</li>
-    <li>List Item3</li>
-</ul>
+<div>
 
-Hikes Coming Soon!
-<ul class="two">
-    <li>List Item A</li>
-    <li>List Item B</li>
-    <li>List Item C</li>
-</ul>
+    <ul>
+        <li ng-repeat="hikething in hikelist">
+
+            {{hikething.Safety}} {{hikething.Terrain}} {{hikething.Trail}}
+
+        </li>
+     
+    </ul>
+
+</div>
+
+
 
 
    

@@ -23,7 +23,7 @@ namespace testcapstone.Models
         public DbSet<Hike> Hikes { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("Trailheadtest", throwIfV1Schema: false)
         {
         }
 

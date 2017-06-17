@@ -13,6 +13,7 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.newhike = {};
    // $scope.HikesId = $routeParams.id;
     
+    
     //This function sends an HTTP POST request to our api.
     //https://docs.angularjs.org/api/ng/service/$http
     $scope.submit = function (hike) {
@@ -45,11 +46,13 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     updatelist();
 
 
-   // RouteProvider.state('/api/hike', {
+   //RouteProvider.state('/api/hike', {
        // url: '/:id',
-       // templateUrl: 'App/partials/Home.html',
+        //templateUrl: 'App/partials/Home.html',
         //controller: 'HomeController'
-   // })
+  // })
+
+
 
 }]);
 
@@ -58,7 +61,6 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     //$scope.selectedDonation = {};
     //let donationId = $routeParams.id;
 
-    //DonationFactory.getSingleDonation(donationId).then(function(oneDonation){
-      //  oneDonation.id=donationId; 
-        //$scope.selectedDonation = oneDonation;
+
+  
         

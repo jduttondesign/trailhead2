@@ -8,13 +8,13 @@ using testcapstone.Models;
 
 namespace testcapstone.Controllers
 {
-    
+
     public class HikeController : ApiController
     {
         ApplicationDbContext db = new ApplicationDbContext();
 
         [Route("api/hike/")]
-            public IEnumerable<Hike> GetAll()
+        public IEnumerable<Hike> GetAll()
         {
             return db.Hikes;
         }
@@ -25,8 +25,23 @@ namespace testcapstone.Controllers
         {
             db.Hikes.Add(hike);
             db.SaveChanges();
-          return Request.CreateResponse(HttpStatusCode.OK);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
+
+
+        [Route("api/hike/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Hike(int id)
+        {
+
+            return Request.CreateResponse(HttpStatusCode.OK);
+            //Console.WriteLine("test");
+        }
+           
+    }
+
+
+
 
         // [System.Web.Http.HttpDelete, System.Web.Http.Route]
         //public HttpResponseMessage Delete()
@@ -43,4 +58,4 @@ namespace testcapstone.Controllers
         //}
 
     }
-}
+

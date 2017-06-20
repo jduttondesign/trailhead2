@@ -57,9 +57,7 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
 }]);
 
 
-//app.controller("DonationViewCtrl", function($scope, $routeParams, DonationFactory){
-    //$scope.selectedDonation = {};
-    //let donationId = $routeParams.id;
+
 
 
   

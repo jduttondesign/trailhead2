@@ -113,7 +113,7 @@ button {
        </div>
 
     <div class="button">
-        <button ng-click= "submit(newhike)">Save your trail!</button>
+        <button ng-click="submit(newhike)">Save your trail!</button>
     </div>
 </div>
 
@@ -122,7 +122,7 @@ button {
     <ul>
         <li ng-repeat="hikething in hikelist">
 
-            {{hikething.Safety}} {{hikething.Terrain}} {{hikething.Trail}}
+            <a ng-href="/#!/detail/{{hikething.id}}">{{hikething.Safety}} {{hikething.Terrain}} {{hikething.Trail}}</a>
 
         </li>
      

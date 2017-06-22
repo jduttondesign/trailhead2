@@ -1,6 +1,6 @@
 ﻿form {
   /* Just to center the form on the page */
-  margin: 0 auto;
+  margin: 10px, 0, 10px, 0 auto;
   width: 400px;
 
   /* To see the limits of the form */
@@ -37,7 +37,7 @@ input, textarea {
 
 input:focus, textarea:focus {
   /* To give a little highligh on active elements */
-  border-color: #000;
+  border-color: #074b07;
 }
 
 textarea {
@@ -75,7 +75,7 @@ button {
     width: 500px;
     height: 100%;
     color: lightblue;
-    padding: 500px;
+    padding: 100px;
     background-position: top center;
 }
 

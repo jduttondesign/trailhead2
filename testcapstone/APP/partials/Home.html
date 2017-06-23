@@ -2,9 +2,9 @@
     
   
 
-   <div>
+   <div class="form">
     <div>
-        <label for="name">Name of Trail:</label>
+        <label for="name">Trail:</label>
         <input type="text" id="name" name="user_name" ng-model="newhike.trail">
     </div>
 
@@ -36,7 +36,7 @@
     <ul>
         <li ng-repeat="hikething in hikelist">
 
-            <a ng-href="/#!/detail/{{hikething.id}}">{{hikething.Safety}} {{hikething.Terrain}} {{hikething.Trail}}</a>
+            <a ng-href="/#!/detail/{{hikething.id}}">{{hikething.Trail}} {{hikething.Terrain}} {{hikething.Safety}}</a>
 
         </li>
      
@@ -44,6 +44,10 @@
   
 
 </div>
+
+<br />
+<br />
+<br />
 
 
 <div id="map" style="width: 350px; height: 350px; float:right;  position: absolute;

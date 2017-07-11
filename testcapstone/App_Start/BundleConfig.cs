@@ -26,6 +26,7 @@ namespace testcapstone
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/App/css/styling.css",
                       "~/Content/site.css"));
 
 

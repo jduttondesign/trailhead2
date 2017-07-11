@@ -11,7 +11,7 @@
 app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.myHikeList = [];
     $scope.newhike = {};
-   // $scope.HikesId = $routeParams.id;
+    // $scope.HikesId = $routeParams.id;
     
     
     //This function sends an HTTP POST request to our api.
@@ -22,14 +22,15 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
 
         $http.post('/api/hike', hike)
             .then(function (res) {
-             $scope.newhike = {};
+                $scope.newhike = {};
                 //$location.path('/home');
-             updatelist();
+                updatelist();
             });
         console.log($scope.newhike.miles);
     }
      
     function updatelist() {
+        console.log("test");
         $http.get('/api/hike')
                .then(function (res) {
                   
@@ -44,14 +45,26 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     }
 
     updatelist();
+   
+    function map() {
+        var uluru = { lat: 36.4703232, lng: -86.6513845}; 
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+   
+    map();
 
+    marker();
 
-   //RouteProvider.state('/api/hike', {
-       // url: '/:id',
-        //templateUrl: 'App/partials/Home.html',
-        //controller: 'HomeController'
-  // })
-
+    //scope.marker = [];
+    //pushing every marker users places
+    //to a location
 
 
 }]);

@@ -248,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\css\styles.css" />
     <Content Include="App\images\Grotto-Falls-Trail1-700x277.jpg" />
     <Content Include="App\partials\Add.html" />
     <Content Include="App\partials\Delete.html" />

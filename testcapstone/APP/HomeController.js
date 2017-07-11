@@ -1,12 +1,5 @@
 ﻿
 
-//app.controller("HomeController", function($scope, $rootScope) {
-    //$scope.Home = {};//was $scope.Hikes = {};
-        //$scope.map = new google.maps.Map(document.getElementById('map'), {
-            //center: {lat: 36.4703, lng: 86.6514},
-            //zoom: 8
-       // })
-//});
 
 app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     $scope.myHikeList = [];

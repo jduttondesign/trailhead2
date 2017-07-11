@@ -34,9 +34,13 @@ namespace testcapstone.Controllers
         public HttpResponseMessage Hike(int id)
         {
 
-            return Request.CreateResponse(HttpStatusCode.OK);
+            var hike = db.Hikes.Find(id);
+
+            return Request.CreateResponse(HttpStatusCode.OK, hike);
             //Console.WriteLine("test");
         }
+
+
            
     }
 

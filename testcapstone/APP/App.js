@@ -8,10 +8,10 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
      controller: 'HomeController'
      })
 
-    //.when('/home', {
-      //  templateUrl: 'App/partials/Home.html',
-        //controller: 'HomeController'
-    //})
+    .when('/detail/:id', {
+        templateUrl: 'App/partials/Detail.html',
+        controller: 'DetailController'
+    })
 
     .when('/add', {
         templateUrl: 'partials/Add.html',

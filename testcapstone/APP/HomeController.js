@@ -60,7 +60,7 @@ app.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
    
     map();
 
-    marker();
+    //marker();
 
     //scope.marker = [];
     //pushing every marker users places
